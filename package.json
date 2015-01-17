@@ -1,0 +1,19 @@
+{
+  "name": "react-quick-guide",
+  "version": "1.0.0",
+  "description": "'ReactJS Quick Start Guide'",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jarsbe/react-quick-guide-boilerplate"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/jarsbe/react-quick-guide-boilerplate/issues"
+  },
+  "homepage": "https://github.com/jarsbe/react-quick-guide-boilerplate",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-react": "^0.10.0"
+  }
+}

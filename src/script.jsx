@@ -36,7 +36,7 @@ var PhotoGallery = React.createClass({
         return [{
             key: 'newyork',
             url: 'http://tinyurl.com/lkevsb9',
-            caption: 'New York!'
+            caption: 'New York'
         },
         {
             key: 'cows',
