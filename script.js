@@ -30,4 +30,37 @@ var Photo = React.createClass({
   }
 });
 
-React.render(<Photo src='http://tinyurl.com/lkevsb9' caption='New York!'/>, document.body);
+var PhotoGallery = React.createClass({
+
+    getDataFromServer: function() {
+        return [{
+            url: 'http://tinyurl.com/lkevsb9',
+            caption: 'New York!'
+        },
+        {
+            url: 'http://tinyurl.com/mxkwh56',
+            caption: 'Cows'
+        },
+        {
+            url: 'http://tinyurl.com/nc7jv28',
+            caption: 'Scooters'
+        }];
+    },
+
+    render: function() {
+        var data = this.getDataFromServer();
+
+        var photos = data.map(function(photo) {
+            return <Photo src={photo.url} caption={photo.caption} />;
+        });
+
+        return (
+            <div className="photo-gallery">
+                {photos}
+            </div>
+        );
+    }
+
+});
+
+React.render(<PhotoGallery />, document.body);
