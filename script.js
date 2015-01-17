@@ -34,14 +34,17 @@ var PhotoGallery = React.createClass({
 
     getDataFromServer: function() {
         return [{
+            key: 'newyork',
             url: 'http://tinyurl.com/lkevsb9',
             caption: 'New York!'
         },
         {
+            key: 'cows',
             url: 'http://tinyurl.com/mxkwh56',
             caption: 'Cows'
         },
         {
+            key: 'scooters',
             url: 'http://tinyurl.com/nc7jv28',
             caption: 'Scooters'
         }];
@@ -51,7 +54,7 @@ var PhotoGallery = React.createClass({
         var data = this.getDataFromServer();
 
         var photos = data.map(function(photo) {
-            return <Photo src={photo.url} caption={photo.caption} />;
+            return <Photo src={photo.url} caption={photo.caption} key={photo.key} />;
         });
 
         return (
