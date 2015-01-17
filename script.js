@@ -1,8 +1,13 @@
 var Photo = React.createClass({
 
   render: function() {
-    return <img src='http://tinyurl.com/lkevsb9' />
+    return (
+      <div className='photo'>
+        <img src={this.props.imageURL} />
+        <span>{this.props.caption}</span>
+      </div>
+    )
   }
 });
 
-React.render(<Photo />, document.body);
+React.render(<Photo imageURL='http://tinyurl.com/lkevsb9' caption='New York!' />, document.body);
